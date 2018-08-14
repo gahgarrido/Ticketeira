@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="87b5cf62707049ecb43987486f097819" Name="Diagram1">
+        <EntityTypeShape EntityType="ticketeiraModel.Category" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticketeiraModel.Event" Width="1.5" PointX="8" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticketeiraModel.Modality" Width="1.5" PointX="5.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticketeiraModel.PhoneType" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticketeiraModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticketeiraModel.UserPhone" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticketeiraModel.Users" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticketeiraModel.UserType" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="ticketeiraModel.FK_Event_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="ticketeiraModel.FK_Event_Modality" ManuallyRouted="false" />
+        <AssociationConnector Association="ticketeiraModel.FK_UserPhone_PhoneType" ManuallyRouted="false" />
+        <AssociationConnector Association="ticketeiraModel.FK_UserPhone_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ticketeiraModel.FK_User_UserType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
