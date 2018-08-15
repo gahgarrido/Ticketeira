@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketeiraWeb", "TicketeiraWeb\TicketeiraWeb.csproj", "{00781D6B-B65F-4CD4-B75A-EDD73816F55A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticketeira", "Ticketeira\Ticketeira.csproj", "{63E2785F-7155-45A0-8C97-B1FC0B7EE12A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{00781D6B-B65F-4CD4-B75A-EDD73816F55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00781D6B-B65F-4CD4-B75A-EDD73816F55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00781D6B-B65F-4CD4-B75A-EDD73816F55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00781D6B-B65F-4CD4-B75A-EDD73816F55A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63E2785F-7155-45A0-8C97-B1FC0B7EE12A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63E2785F-7155-45A0-8C97-B1FC0B7EE12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63E2785F-7155-45A0-8C97-B1FC0B7EE12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63E2785F-7155-45A0-8C97-B1FC0B7EE12A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
