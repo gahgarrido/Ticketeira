@@ -1,0 +1,348 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Jetson I Fast build Admin dashboard for any platform</title>
+    <meta name="description" content="Ticketeira é uma aplicação para comercialização de bilhetes de eventos esportivo." />
+    <meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Jetson Admin, Jetsonadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+    <meta name="author" content="hencework" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- vector map CSS -->
+    <link href="~/jetsonFiles/vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="~/jetsonFiles/dist/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!--Preloader-->
+    <div class="preloader-it">
+        <div class="la-anim-1"></div>
+    </div>
+    <!--/Preloader-->
+
+    <div class="wrapper pa-0">
+        <header class="sp-header">
+            <div class="sp-logo-wrap pull-left">
+                <a href="index.html">
+                    <img class="brand-img mr-10" src="~/jetsonFiles/dist/img/logo.png" alt="brand" />
+                    <span class="brand-text">Ticketeira</span>
+                </a>
+            </div>
+            <div class="form-group mb-0 pull-right">
+                <span class="inline-block pr-10">Você ainda não tem conta?</span>
+                <a class="inline-block btn btn-info  btn-rounded btn-outline" href="@Url.Action("Cadastra", "Home")">Cadastrar</a>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="page-wrapper pa-0 ma-0 auth-page">
+            <div class="container-fluid">
+                <!-- Row -->
+                <div class="table-struct full-width full-height">
+                    <div class="table-cell vertical-align-middle auth-form-wrap">
+                        <div class="page-wrapper ml-auto mr-auto no-float">
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-6">
+                                    <div class="col-md-12">
+                                        <div class="panel panel-default card-view">
+                                            <div class="panel-heading">
+                                                <div class="pull-left">
+                                                    <h6 class="panel-title txt-dark">Cadastre-se</h6>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="panel-wrapper collapse in">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-xs-12">
+                                                            <div class="form-wrap">
+                                                                <form class="form-horizontal">
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputuname_3" class="col-sm-3 control-label">Usuario*</label>
+                                                                        <div class="col-sm-9">
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-addon"><i class="icon-user"></i></div>
+                                                                                <input type="text" class="form-control" id="user" placeholder="Usuário">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputEmail_3" class="col-sm-3 control-label">Email*</label>
+                                                                        <div class="col-sm-9">
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+                                                                                <input type="email" class="form-control" id="userEmail" placeholder="E-mail">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputEmail_3" class="col-sm-3 control-label">Nome*</label>
+                                                                        <div class="col-sm-9">
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-addon"><i class="icon-user"></i></div>
+                                                                                <input type="text" class="form-control" id="userName" placeholder="Nome">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputpwd_32" class="col-sm-3 control-label">Senha*</label>
+                                                                        <div class="col-sm-9">
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-addon"><i class="icon-lock"></i></div>
+                                                                                <input type="password" class="form-control" id="userPassword" placeholder="Digite a senha">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputpwd_4" class="col-sm-3 control-label">Confirmar Senha*</label>
+                                                                        <div class="col-sm-9">
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-addon"><i class="icon-lock"></i></div>
+                                                                                <input type="password" class="form-control" id="userPasswordConf" placeholder="Digite novamente a senha">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputpwd_4" class="col-sm-3 control-label">Endereço*</label>
+                                                                        <div class="col-sm-9">
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-addon"><i class="icon-location-pin"></i></div>
+                                                                                <input type="text" class="form-control" id="addressUser" placeholder="Endereço">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputpwd_4" class="col-sm-3 control-label">Número*</label>
+                                                                        <div class="col-sm-9">
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-addon"><i class="icon-direction"></i></div>
+                                                                                <input type="number" class="form-control" id="numberUser" placeholder="Número">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputpwd_4" class="col-sm-3 control-label">Complemento</label>
+                                                                        <div class="col-sm-9">
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-addon"><i class="icon-home"></i></div>
+                                                                                <input type="text" class="form-control" id="address2User" placeholder="Complemento">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputpwd_4" class="col-sm-3 control-label">CEP</label>
+                                                                        <div class="col-sm-9">
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-addon"><i class="icon-compass"></i></div>
+                                                                                <input type="text" class="form-control" maxlength="8" id="cep" placeholder="Digite o CEP">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputpwd_4" class="col-sm-3 control-label">Estado</label>
+                                                                        <div class="col-sm-9">
+                                                                            <select class="form-control" id="estadoSelect">
+                                                                                <option id="noSelect">---Seleciona um Estado---</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputpwd_4" class="col-sm-3 control-label">Cidade</label>
+                                                                        <div class="col-sm-9">
+                                                                            <select class="form-control" id="cidadeSelect">
+                                                                                <option id="noSelect">---Seleciona uma Cidade---</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group mb-0">
+                                                                        <div class="col-sm-offset-3 col-sm-9">
+                                                                            <button type="button" class="btn btn-info" id="btnCadastrar">Cadastrar</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Row -->
+            </div>
+
+        </div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- JavaScript -->
+    <!-- jQuery -->
+    <script src="~/jetsonFiles/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/jetsonFiles/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/jetsonFiles/vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+
+    <!-- Slimscroll JavaScript -->
+    <script src="~/jetsonFiles/dist/js/jquery.slimscroll.js"></script>
+
+    <!-- Init JavaScript -->
+    <script src="~/jetsonFiles/dist/js/init.js"></script>
+    <script type="text/javascript">
+        var cidade = "";
+        $(document).ready(function () {
+            carregaEstados();
+
+            $("#cep").keyup(function () {
+                if ($("#cep").val().length >= 8) {
+                    var teste = "https://viacep.com.br/ws/" + $("#cep").val() + "/json/";
+
+                    $.ajax({
+                        type: "GET",
+                        url: teste,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (data, status) {
+                            $("#addressUser").val(data.logradouro);
+                            validaEstado(data.uf);
+                            cidade = data.localidade;
+                        }
+
+                    });
+                }                    
+            });
+
+            $("#estadoSelect").change(function () {
+                carregaCidades($("#estadoSelect option:selected").attr('id'));
+            });
+
+            $("#btnCadastrar").click(function () {
+                
+            });
+
+
+        });
+
+        function validaEstado(estado) {
+            $("#estadoSelect option:selected").prop("selected", false);
+            $("#estadoSelect option[id='" + estado + "']").prop("selected", true);
+            carregaCidades(estado);
+        }
+
+        function carregaEstados() {
+            var serviceURL = '/Home/GetEstados';
+
+            $.ajax({
+                type: "POST",
+                url: serviceURL,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data, status) {
+                    for (var i = 0; i < data.length; i++) {
+                        $("#estadoSelect").append("<option id='" + data[i].Uf + "'>" + data[i].Nome + "</option>");
+                    }
+                },
+                error: errorFunc
+            });
+
+        }
+
+        function carregaCidades(ufParam) {
+            $("#cidadeSelect option:not(:contains('noSelect'))").remove();
+            var uf = { uf: ufParam};
+            var serviceURL = '/Home/GetCidades';
+            $.ajax({
+                type: "POST",
+                url: serviceURL,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify(uf),
+                success: function (data, status) {
+                    console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+                        $("#cidadeSelect").append("<option id='" + data[i].Nome + "'>" + data[i].Nome + "</option>");
+                    }
+                    $("#cidadeSelect option[id='" + cidade + "']").prop("selected", true);
+                },
+                error: errorFunc
+            });
+
+        }
+
+        function buscaCEP() {
+
+        }
+
+        function login() {
+            var serviceURL = '/Home/DoLogin';
+            var testeObj = ObjLogin();
+
+            testeObj.setEmail($("#email").val());
+            testeObj.setPassword($("#password").val());
+
+            $.ajax({
+                type: "POST",
+                data: JSON.stringify(testeObj),
+                url: serviceURL,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data, status) {
+                    console.log(data);
+                    window.location.href = data;
+                },
+                error: errorFunc
+            });
+        }
+
+        function successFunc(data, status) {
+            console.log(data);
+            console.log(status);
+            window.location.href = data;
+        }
+
+        function errorFunc(data, status) {
+            console.log(data);
+            console.log(status);
+        }
+
+        var ObjLogin = (function () {
+
+            var email = "";
+            var password = "";
+
+            return {
+
+                getEmail: function() {
+                    return this.email;
+                },
+                setEmail: function (emailParm) {
+                    this.email = emailParm;
+                },
+                getPassword: function () {
+                    return this.password;
+                },
+                setPassword: function (passwordParm) {
+                    this.password = passwordParm;
+                }
+            }
+
+        });
+    </script>
+</body>
+</html>

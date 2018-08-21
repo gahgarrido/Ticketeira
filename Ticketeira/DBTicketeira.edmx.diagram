@@ -5,19 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a02fc62450224c6182a99b8d724f6453" Name="Diagram1">
-        <EntityTypeShape EntityType="ticketeiraModel.Category" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ticketeiraModel.Event" Width="1.5" PointX="8" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="ticketeiraModel.Modality" Width="1.5" PointX="5.75" PointY="10.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ticketeiraModel.PhoneType" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ticketeiraModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ticketeiraModel.UserPhone" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="ticketeiraModel.Users" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ticketeiraModel.UserType" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
-        <AssociationConnector Association="ticketeiraModel.FK_Event_Category" ManuallyRouted="false" />
-        <AssociationConnector Association="ticketeiraModel.FK_Event_Modality" ManuallyRouted="false" />
-        <AssociationConnector Association="ticketeiraModel.FK_UserPhone_PhoneType" ManuallyRouted="false" />
-        <AssociationConnector Association="ticketeiraModel.FK_UserPhone_Users" ManuallyRouted="false" />
-        <AssociationConnector Association="ticketeiraModel.FK_User_UserType" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ticketeiraModel.Category" Width="1.5" PointX="5.75" PointY="10.125" />
+        <EntityTypeShape EntityType="ticketeiraModel.Estado" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ticketeiraModel.Event" Width="1.5" PointX="8" PointY="6" />
+        <EntityTypeShape EntityType="ticketeiraModel.Modality" Width="1.5" PointX="5.75" PointY="7.125" />
+        <EntityTypeShape EntityType="ticketeiraModel.Municipio" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ticketeiraModel.PhoneType" Width="1.5" PointX="3" PointY="7.25" />
+        <EntityTypeShape EntityType="ticketeiraModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ticketeiraModel.UserPhone" Width="1.5" PointX="5.25" PointY="2" />
+        <EntityTypeShape EntityType="ticketeiraModel.Users" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="ticketeiraModel.UserType" Width="1.5" PointX="0.75" PointY="2.25" />
+        <AssociationConnector Association="ticketeiraModel.FK_Event_Category" />
+        <AssociationConnector Association="ticketeiraModel.FK_Event_Modality" />
+        <AssociationConnector Association="ticketeiraModel.FK_UserPhone_PhoneType" />
+        <AssociationConnector Association="ticketeiraModel.FK_UserPhone_Users" />
+        <AssociationConnector Association="ticketeiraModel.FK_User_UserType" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -160,6 +160,7 @@
     <Compile Include="Category.cs">
       <DependentUpon>DBTicketeira.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CadastroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DBTicketeira.Context.cs">
       <AutoGen>True</AutoGen>
@@ -176,6 +177,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBTicketeira.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Estado.cs">
+      <DependentUpon>DBTicketeira.tt</DependentUpon>
+    </Compile>
     <Compile Include="Event.cs">
       <DependentUpon>DBTicketeira.tt</DependentUpon>
     </Compile>
@@ -183,6 +187,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Modality.cs">
+      <DependentUpon>DBTicketeira.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Municipio.cs">
       <DependentUpon>DBTicketeira.tt</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
@@ -4584,6 +4591,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout_old.cshtml" />
     <Content Include="Views\Home\Index_old.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Cadastro\Cadastra.cshtml" />
+    <Content Include="Views\Home\Cadastra.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
