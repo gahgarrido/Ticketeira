@@ -160,6 +160,9 @@
     <Compile Include="Category.cs">
       <DependentUpon>DBTicketeira.tt</DependentUpon>
     </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>DBTicketeira.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\CadastroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DBTicketeira.Context.cs">
@@ -177,9 +180,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBTicketeira.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Estado.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
-    </Compile>
     <Compile Include="Event.cs">
       <DependentUpon>DBTicketeira.tt</DependentUpon>
     </Compile>
@@ -187,9 +187,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Modality.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Municipio.cs">
       <DependentUpon>DBTicketeira.tt</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
@@ -203,6 +200,9 @@
       <DependentUpon>DBTicketeira.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>DBTicketeira.tt</DependentUpon>
+    </Compile>
+    <Compile Include="State.cs">
       <DependentUpon>DBTicketeira.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
@@ -4574,6 +4574,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

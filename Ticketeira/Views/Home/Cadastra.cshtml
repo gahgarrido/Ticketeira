@@ -18,6 +18,9 @@
     <!-- vector map CSS -->
     <link href="~/jetsonFiles/vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css" />
 
+    <!--alerts CSS -->
+    <link href="~/jetsonFiles/vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
+
     <!-- Custom CSS -->
     <link href="~/jetsonFiles/dist/css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -118,7 +121,7 @@
                                                                         <div class="col-sm-9">
                                                                             <div class="input-group">
                                                                                 <div class="input-group-addon"><i class="icon-location-pin"></i></div>
-                                                                                <input type="text" class="form-control" id="addressUser" placeholder="Endereço">
+                                                                                <input type="text" class="form-control" id="UserAddress" placeholder="Endereço">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -127,7 +130,7 @@
                                                                         <div class="col-sm-9">
                                                                             <div class="input-group">
                                                                                 <div class="input-group-addon"><i class="icon-direction"></i></div>
-                                                                                <input type="number" class="form-control" id="numberUser" placeholder="Número">
+                                                                                <input type="number" class="form-control" id="userNumber" placeholder="Número">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -136,7 +139,7 @@
                                                                         <div class="col-sm-9">
                                                                             <div class="input-group">
                                                                                 <div class="input-group-addon"><i class="icon-home"></i></div>
-                                                                                <input type="text" class="form-control" id="address2User" placeholder="Complemento">
+                                                                                <input type="text" class="form-control" id="userAddress2" placeholder="Complemento">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -145,14 +148,14 @@
                                                                         <div class="col-sm-9">
                                                                             <div class="input-group">
                                                                                 <div class="input-group-addon"><i class="icon-compass"></i></div>
-                                                                                <input type="text" class="form-control" maxlength="8" id="cep" placeholder="Digite o CEP">
+                                                                                <input type="text" class="form-control" maxlength="8" id="userCep" placeholder="Digite o CEP">
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label for="exampleInputpwd_4" class="col-sm-3 control-label">Estado</label>
                                                                         <div class="col-sm-9">
-                                                                            <select class="form-control" id="estadoSelect">
+                                                                            <select class="form-control" id="userEstadoSelect">
                                                                                 <option id="noSelect">---Seleciona um Estado---</option>
                                                                             </select>
                                                                         </div>
@@ -160,12 +163,18 @@
                                                                     <div class="form-group">
                                                                         <label for="exampleInputpwd_4" class="col-sm-3 control-label">Cidade</label>
                                                                         <div class="col-sm-9">
-                                                                            <select class="form-control" id="cidadeSelect">
+                                                                            <select class="form-control" id="userCidadeSelect">
                                                                                 <option id="noSelect">---Seleciona uma Cidade---</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group mb-0">
+                                                                        <div class="panel-wrapper collapse in">
+                                                                            <div class="panel-body">
+                                                                                <img src="~/jetsonFiles/dist/img/sweetalert/alert5.png" alt="alert" class="img-responsive model_img" id="sa-params">
+                                                                                <button type="button" class="btn btn-info" id="btnCadastrar">Cadastrar</button>
+                                                                            </div>
+                                                                        </div>
                                                                         <div class="col-sm-offset-3 col-sm-9">
                                                                             <button type="button" class="btn btn-info" id="btnCadastrar">Cadastrar</button>
                                                                         </div>
@@ -190,10 +199,58 @@
         <!-- /Main Content -->
 
     </div>
+
+    @*<div class="sweet-alert hideSweetAlert" data-custom-class="" data-has-cancel-button="false" data-has-confirm-button="true" data-allow-outside-click="false" data-has-done-function="false" data-animation="pop" data-timer="null" style="display: none; margin-top: -167px; opacity: 0;">
+        <div class="sa-icon sa-error" style="display: block;">
+            <span class="sa-x-mark">
+                <span class="sa-line sa-left"></span>
+                <span class="sa-line sa-right"></span>
+            </span>
+        </div><div class="sa-icon sa-warning" style="display: none;">
+            <span class="sa-body"></span>
+            <span class="sa-dot"></span>
+        </div><div class="sa-icon sa-info" style="display: none;"></div><div class="sa-icon sa-success" style="display: none;">
+            <span class="sa-line sa-tip"></span>
+            <span class="sa-line sa-long"></span>
+
+            <div class="sa-placeholder"></div>
+            <div class="sa-fix"></div>
+        </div><div class="sa-icon sa-custom" style="display: none;"></div><h2>Cancelled</h2>
+        <p style="display: block;">Your imaginary file is safe :)</p>
+        <fieldset>
+            <input type="text" tabindex="3" placeholder="">
+            <div class="sa-input-error"></div>
+        </fieldset><div class="sa-error-container">
+            <div class="icon">!</div>
+            <p>Not valid!</p>
+        </div><div class="sa-button-container">
+            <button class="cancel" tabindex="2" style="display: none; box-shadow: none;">Cancel</button>
+            <div class="sa-confirm-button-container">
+                <button class="confirm" tabindex="1" style="display: inline-block; background-color: rgb(140, 212, 245); box-shadow: rgba(140, 212, 245, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px inset;">OK</button><div class="la-ball-fall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>*@
     <!-- /#wrapper -->
     <!-- JavaScript -->
     <!-- jQuery -->
     <script src="~/jetsonFiles/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Owl JavaScript -->
+    <script src="~/jetsonFiles/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+    <!-- Switchery JavaScript -->
+    <script src="~/jetsonFiles/vendors/bower_components/switchery/dist/switchery.min.js"></script>
+
+    <!-- Sweet-Alert  -->
+    <script src="~/jetsonFiles/vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="~/jetsonFiles/dist/js/sweetalert-data.js"></script>
+
+    <!-- Fancy Dropdown JS -->
+    <script src="~/jetsonFiles/dist/js/dropdown-bootstrap-extended.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="~/jetsonFiles/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -204,14 +261,17 @@
 
     <!-- Init JavaScript -->
     <script src="~/jetsonFiles/dist/js/init.js"></script>
+
+
+
     <script type="text/javascript">
         var cidade = "";
         $(document).ready(function () {
             carregaEstados();
 
-            $("#cep").keyup(function () {
-                if ($("#cep").val().length >= 8) {
-                    var teste = "https://viacep.com.br/ws/" + $("#cep").val() + "/json/";
+            $("#userCep").keyup(function () {
+                if ($("#userCep").val().length >= 8) {
+                    var teste = "https://viacep.com.br/ws/" + $("#userCep").val() + "/json/";
 
                     $.ajax({
                         type: "GET",
@@ -219,29 +279,55 @@
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         success: function (data, status) {
-                            $("#addressUser").val(data.logradouro);
+                            $("#UserAddress").val(data.logradouro);
                             validaEstado(data.uf);
                             cidade = data.localidade;
                         }
 
                     });
-                }                    
+                }
             });
 
-            $("#estadoSelect").change(function () {
-                carregaCidades($("#estadoSelect option:selected").attr('id'));
+            $("#userEstadoSelect").change(function () {
+                carregaCidades($("#userEstadoSelect option:selected").attr('id'));
             });
 
             $("#btnCadastrar").click(function () {
-                
+                //var usuarioObj = ObjUsuario();
+
+                //usuarioObj.setUser($("#user").val());
+                //usuarioObj.setPassword($("#userPassword").val());
+                //usuarioObj.setName($("#userName").val());
+                //usuarioObj.setEmail($("#userEmail").val());
+                //usuarioObj.setAddress($("#UserAddress").val());
+                //usuarioObj.setNumber($("#userNumber").val());
+                //usuarioObj.setAddress2($("#userAddress2").val());
+                //usuarioObj.setCep($("#userCep").val());
+                //usuarioObj.setEstadoSelect($("#userEstadoSelect").val());
+                //usuarioObj.setCidadeSelect($("#userCidadeSelect").val());
+
+                //var userPasswordConfParam = $("#userPasswordConf").val();
+
+                //validaLogin(usuarioObj, userPasswordConfParam);
+                //$("#testeAlert").modal("show");
+                alert();
             });
 
 
         });
 
+        function validaLogin(objUser, passwordConfirmation) {
+
+            //var teste = (ObjUsuario)objUser;
+
+            //teste.get
+
+
+        }
+
         function validaEstado(estado) {
-            $("#estadoSelect option:selected").prop("selected", false);
-            $("#estadoSelect option[id='" + estado + "']").prop("selected", true);
+            $("#userEstadoSelect option:selected").prop("selected", false);
+            $("#userEstadoSelect option[id='" + estado + "']").prop("selected", true);
             carregaCidades(estado);
         }
 
@@ -255,7 +341,7 @@
                 dataType: "json",
                 success: function (data, status) {
                     for (var i = 0; i < data.length; i++) {
-                        $("#estadoSelect").append("<option id='" + data[i].Uf + "'>" + data[i].Nome + "</option>");
+                        $("#userEstadoSelect").append("<option id='" + data[i].Uf + "'>" + data[i].Nome + "</option>");
                     }
                 },
                 error: errorFunc
@@ -264,8 +350,8 @@
         }
 
         function carregaCidades(ufParam) {
-            $("#cidadeSelect option:not(:contains('noSelect'))").remove();
-            var uf = { uf: ufParam};
+            $("#userCidadeSelect option:not(:contains('noSelect'))").remove();
+            var uf = { uf: ufParam };
             var serviceURL = '/Home/GetCidades';
             $.ajax({
                 type: "POST",
@@ -276,9 +362,9 @@
                 success: function (data, status) {
                     console.log(data);
                     for (var i = 0; i < data.length; i++) {
-                        $("#cidadeSelect").append("<option id='" + data[i].Nome + "'>" + data[i].Nome + "</option>");
+                        $("#userCidadeSelect").append("<option id='" + data[i].Nome + "'>" + data[i].Nome + "</option>");
                     }
-                    $("#cidadeSelect option[id='" + cidade + "']").prop("selected", true);
+                    $("#userCidadeSelect option[id='" + cidade + "']").prop("selected", true);
                 },
                 error: errorFunc
             });
@@ -291,10 +377,10 @@
 
         function login() {
             var serviceURL = '/Home/DoLogin';
-            var testeObj = ObjLogin();
+            var testeObj = ObjUsuario();
 
-            testeObj.setEmail($("#email").val());
-            testeObj.setPassword($("#password").val());
+            testeObj.setEmail($("#userEmail").val());
+            testeObj.setPassword($("#userPassword").val());
 
             $.ajax({
                 type: "POST",
@@ -321,14 +407,22 @@
             console.log(status);
         }
 
-        var ObjLogin = (function () {
+        var ObjUsuario = (function () {
 
             var email = "";
             var password = "";
+            var user = "";
+            var name = "";
+            var address = "";
+            var number = "";
+            var address2 = "";
+            var cep = "";
+            var estadoSelect = "";
+            var cidadeSelect = "";
 
             return {
 
-                getEmail: function() {
+                getEmail: function () {
                     return this.email;
                 },
                 setEmail: function (emailParm) {
@@ -339,6 +433,54 @@
                 },
                 setPassword: function (passwordParm) {
                     this.password = passwordParm;
+                },
+                setUser: function (userParm) {
+                    this.user = userParm;
+                },
+                getUser: function () {
+                    return this.user;
+                },
+                setName: function (nameParm) {
+                    this.name = nameParm;
+                },
+                getName: function () {
+                    return this.name;
+                },
+                setAddress: function (addressParm) {
+                    this.address = addressParm;
+                },
+                getAddress: function () {
+                    return this.address;
+                },
+                setNumber: function (numberParm) {
+                    this.number = numberParm;
+                },
+                getNumber: function () {
+                    return this.number;
+                },
+                setAddress2: function (address2Parm) {
+                    this.address2 = address2Parm;
+                },
+                getAddress2: function () {
+                    return this.address2;
+                },
+                setCep: function (cepParm) {
+                    this.cep = cepParm;
+                },
+                getCep: function () {
+                    return this.cep;
+                },
+                setEstadoSelect: function (estadoSelectParm) {
+                    this.estadoSelect = estadoSelectParm;
+                },
+                getEstadoSelect: function () {
+                    return this.estadoSelect;
+                },
+                setCidadeSelect: function (cidadeSelectParm) {
+                    this.cidadeSelect = cidadeSelectParm;
+                },
+                getCidadeSelect: function () {
+                    return this.cidadeSelect;
                 }
             }
 

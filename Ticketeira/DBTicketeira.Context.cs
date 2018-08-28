@@ -28,11 +28,11 @@ namespace Ticketeira
         }
     
         public virtual DbSet<Category> Category { get; set; }
-        public virtual DbSet<Estado> Estado { get; set; }
+        public virtual DbSet<City> City { get; set; }
         public virtual DbSet<Event> Event { get; set; }
         public virtual DbSet<Modality> Modality { get; set; }
-        public virtual DbSet<Municipio> Municipio { get; set; }
         public virtual DbSet<PhoneType> PhoneType { get; set; }
+        public virtual DbSet<State> State { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<UserPhone> UserPhone { get; set; }
         public virtual DbSet<Users> Users { get; set; }

@@ -12,31 +12,24 @@ namespace Ticketeira
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class City
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
+        public City()
         {
-            this.UserPhone = new HashSet<UserPhone>();
+            this.Event = new HashSet<Event>();
+            this.Users = new HashSet<Users>();
         }
     
-        public int UserId { get; set; }
-        public int UserTypeId { get; set; }
+        public int CityId { get; set; }
+        public int Code { get; set; }
         public string Name { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-        public string Address { get; set; }
-        public int Number { get; set; }
-        public string Complement { get; set; }
-        public Nullable<int> CityId { get; set; }
-        public int ZipCode { get; set; }
-        public Nullable<System.DateTime> LastLogin { get; set; }
-        public bool Status { get; set; }
+        public string UF { get; set; }
     
-        public virtual City City { get; set; }
+        public virtual State State { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserPhone> UserPhone { get; set; }
-        public virtual UserType UserType { get; set; }
+        public virtual ICollection<Event> Event { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Users> Users { get; set; }
     }
 }

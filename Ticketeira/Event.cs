@@ -18,8 +18,7 @@ namespace Ticketeira
         public string Address { get; set; }
         public int Number { get; set; }
         public string Complement { get; set; }
-        public string State { get; set; }
-        public string City { get; set; }
+        public Nullable<int> CityId { get; set; }
         public int ZipCode { get; set; }
         public System.DateTime StartDate { get; set; }
         public Nullable<System.DateTime> EndDate { get; set; }
@@ -28,6 +27,7 @@ namespace Ticketeira
         public Nullable<decimal> Value { get; set; }
     
         public virtual Category Category { get; set; }
+        public virtual City City { get; set; }
         public virtual Modality Modality { get; set; }
     }
 }
