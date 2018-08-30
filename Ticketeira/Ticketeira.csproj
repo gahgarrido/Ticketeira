@@ -205,13 +205,13 @@
     <Compile Include="State.cs">
       <DependentUpon>DBTicketeira.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>DBTicketeira.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
       <DependentUpon>DBTicketeira.tt</DependentUpon>
     </Compile>
     <Compile Include="UserPhone.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Users.cs">
       <DependentUpon>DBTicketeira.tt</DependentUpon>
     </Compile>
     <Compile Include="UserType.cs">

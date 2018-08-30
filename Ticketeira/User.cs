@@ -12,12 +12,12 @@ namespace Ticketeira
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
+        public User()
         {
-            this.UserPhone = new HashSet<UserPhone>();
+            this.UserPhones = new HashSet<UserPhone>();
         }
     
         public int UserId { get; set; }
@@ -36,7 +36,7 @@ namespace Ticketeira
     
         public virtual City City { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserPhone> UserPhone { get; set; }
+        public virtual ICollection<UserPhone> UserPhones { get; set; }
         public virtual UserType UserType { get; set; }
     }
 }

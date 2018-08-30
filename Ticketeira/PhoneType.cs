@@ -17,13 +17,13 @@ namespace Ticketeira
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PhoneType()
         {
-            this.UserPhone = new HashSet<UserPhone>();
+            this.UserPhones = new HashSet<UserPhone>();
         }
     
         public int PhoneTypeId { get; set; }
         public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserPhone> UserPhone { get; set; }
+        public virtual ICollection<UserPhone> UserPhones { get; set; }
     }
 }

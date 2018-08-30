@@ -27,16 +27,16 @@ namespace Ticketeira
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Category> Category { get; set; }
-        public virtual DbSet<City> City { get; set; }
-        public virtual DbSet<Event> Event { get; set; }
-        public virtual DbSet<Modality> Modality { get; set; }
-        public virtual DbSet<PhoneType> PhoneType { get; set; }
-        public virtual DbSet<State> State { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<UserPhone> UserPhone { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
-        public virtual DbSet<UserType> UserType { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<City> Cities { get; set; }
+        public virtual DbSet<Event> Events { get; set; }
+        public virtual DbSet<Modality> Modalities { get; set; }
+        public virtual DbSet<PhoneType> PhoneTypes { get; set; }
+        public virtual DbSet<State> States { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<UserPhone> UserPhones { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserType> UserTypes { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

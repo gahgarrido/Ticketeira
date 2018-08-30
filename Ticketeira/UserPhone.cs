@@ -20,6 +20,6 @@ namespace Ticketeira
         public int PhoneTypeId { get; set; }
     
         public virtual PhoneType PhoneType { get; set; }
-        public virtual Users Users { get; set; }
+        public virtual User User { get; set; }
     }
 }

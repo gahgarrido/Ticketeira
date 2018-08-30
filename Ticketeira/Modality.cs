@@ -17,13 +17,13 @@ namespace Ticketeira
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Modality()
         {
-            this.Event = new HashSet<Event>();
+            this.Events = new HashSet<Event>();
         }
     
         public int ModalityId { get; set; }
         public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Event> Event { get; set; }
+        public virtual ICollection<Event> Events { get; set; }
     }
 }
