@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="CategoryId" />
           </Key>
-          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="City">
@@ -25,7 +25,7 @@
           <Key>
             <PropertyRef Name="EventId" />
           </Key>
-          <Property Name="EventId" Type="int" Nullable="false" />
+          <Property Name="EventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Address" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="Number" Type="int" Nullable="false" />
           <Property Name="Complement" Type="varchar" MaxLength="200" />
@@ -41,14 +41,14 @@
           <Key>
             <PropertyRef Name="ModalityId" />
           </Key>
-          <Property Name="ModalityId" Type="int" Nullable="false" />
+          <Property Name="ModalityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="PhoneType">
           <Key>
             <PropertyRef Name="PhoneTypeId" />
           </Key>
-          <Property Name="PhoneTypeId" Type="int" Nullable="false" />
+          <Property Name="PhoneTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="State">
@@ -74,7 +74,7 @@
           <Key>
             <PropertyRef Name="UserPhoneId" />
           </Key>
-          <Property Name="UserPhoneId" Type="int" Nullable="false" />
+          <Property Name="UserPhoneId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="PhoneNumber" Type="int" Nullable="false" />
           <Property Name="PhoneTypeId" Type="int" Nullable="false" />
@@ -83,7 +83,7 @@
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserTypeId" Type="int" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="Login" Type="varchar" MaxLength="200" Nullable="false" />
@@ -101,7 +101,7 @@
           <Key>
             <PropertyRef Name="UserTypeId" />
           </Key>
-          <Property Name="UserTypeId" Type="int" Nullable="false" />
+          <Property Name="UserTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <Association Name="FK_City_State_UF">
@@ -310,47 +310,47 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
-          <EntitySet Name="Category" EntityType="ticketeiraModel.Category" />
-          <EntitySet Name="City" EntityType="ticketeiraModel.City" />
-          <EntitySet Name="Event" EntityType="ticketeiraModel.Event" />
-          <EntitySet Name="Modality" EntityType="ticketeiraModel.Modality" />
-          <EntitySet Name="PhoneType" EntityType="ticketeiraModel.PhoneType" />
-          <EntitySet Name="State" EntityType="ticketeiraModel.State" />
-          <EntitySet Name="sysdiagrams" EntityType="ticketeiraModel.sysdiagrams" />
-          <EntitySet Name="UserPhone" EntityType="ticketeiraModel.UserPhone" />
-          <EntitySet Name="Users" EntityType="ticketeiraModel.Users" />
-          <EntitySet Name="UserType" EntityType="ticketeiraModel.UserType" />
+          <EntitySet Name="Categories" EntityType="ticketeiraModel.Category" />
+          <EntitySet Name="Cities" EntityType="ticketeiraModel.City" />
+          <EntitySet Name="Events" EntityType="ticketeiraModel.Event" />
+          <EntitySet Name="Modalities" EntityType="ticketeiraModel.Modality" />
+          <EntitySet Name="PhoneTypes" EntityType="ticketeiraModel.PhoneType" />
+          <EntitySet Name="States" EntityType="ticketeiraModel.State" />
+          <EntitySet Name="sysdiagrams" EntityType="ticketeiraModel.sysdiagram" />
+          <EntitySet Name="UserPhones" EntityType="ticketeiraModel.UserPhone" />
+          <EntitySet Name="Users" EntityType="ticketeiraModel.User" />
+          <EntitySet Name="UserTypes" EntityType="ticketeiraModel.UserType" />
           <AssociationSet Name="FK_Event_Category" Association="ticketeiraModel.FK_Event_Category">
-            <End Role="Category" EntitySet="Category" />
-            <End Role="Event" EntitySet="Event" />
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Event" EntitySet="Events" />
           </AssociationSet>
           <AssociationSet Name="FK_City_State_UF" Association="ticketeiraModel.FK_City_State_UF">
-            <End Role="State" EntitySet="State" />
-            <End Role="City" EntitySet="City" />
+            <End Role="State" EntitySet="States" />
+            <End Role="City" EntitySet="Cities" />
           </AssociationSet>
           <AssociationSet Name="FK_Event_City" Association="ticketeiraModel.FK_Event_City">
-            <End Role="City" EntitySet="City" />
-            <End Role="Event" EntitySet="Event" />
+            <End Role="City" EntitySet="Cities" />
+            <End Role="Event" EntitySet="Events" />
           </AssociationSet>
           <AssociationSet Name="FK_User_City" Association="ticketeiraModel.FK_User_City">
-            <End Role="City" EntitySet="City" />
-            <End Role="Users" EntitySet="Users" />
+            <End Role="City" EntitySet="Cities" />
+            <End Role="User" EntitySet="Users" />
           </AssociationSet>
           <AssociationSet Name="FK_Event_Modality" Association="ticketeiraModel.FK_Event_Modality">
-            <End Role="Modality" EntitySet="Modality" />
-            <End Role="Event" EntitySet="Event" />
+            <End Role="Modality" EntitySet="Modalities" />
+            <End Role="Event" EntitySet="Events" />
           </AssociationSet>
           <AssociationSet Name="FK_UserPhone_PhoneType" Association="ticketeiraModel.FK_UserPhone_PhoneType">
-            <End Role="PhoneType" EntitySet="PhoneType" />
-            <End Role="UserPhone" EntitySet="UserPhone" />
+            <End Role="PhoneType" EntitySet="PhoneTypes" />
+            <End Role="UserPhone" EntitySet="UserPhones" />
           </AssociationSet>
           <AssociationSet Name="FK_UserPhone_Users" Association="ticketeiraModel.FK_UserPhone_Users">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="UserPhone" EntitySet="UserPhone" />
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserPhone" EntitySet="UserPhones" />
           </AssociationSet>
           <AssociationSet Name="FK_User_UserType" Association="ticketeiraModel.FK_User_UserType">
-            <End Role="UserType" EntitySet="UserType" />
-            <End Role="Users" EntitySet="Users" />
+            <End Role="UserType" EntitySet="UserTypes" />
+            <End Role="User" EntitySet="Users" />
           </AssociationSet>
           </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -368,9 +368,9 @@
           <Key>
             <PropertyRef Name="CategoryId" />
           </Key>
-          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Event" Relationship="ticketeiraModel.FK_Event_Category" FromRole="Category" ToRole="Event" />
+          <NavigationProperty Name="Events" Relationship="ticketeiraModel.FK_Event_Category" FromRole="Category" ToRole="Event" />
         </EntityType>
         <EntityType Name="City">
           <Key>
@@ -381,14 +381,14 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="UF" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="State" Relationship="ticketeiraModel.FK_City_State_UF" FromRole="City" ToRole="State" />
-          <NavigationProperty Name="Event" Relationship="ticketeiraModel.FK_Event_City" FromRole="City" ToRole="Event" />
-          <NavigationProperty Name="Users" Relationship="ticketeiraModel.FK_User_City" FromRole="City" ToRole="Users" />
+          <NavigationProperty Name="Events" Relationship="ticketeiraModel.FK_Event_City" FromRole="City" ToRole="Event" />
+          <NavigationProperty Name="Users" Relationship="ticketeiraModel.FK_User_City" FromRole="City" ToRole="User" />
         </EntityType>
         <EntityType Name="Event">
           <Key>
             <PropertyRef Name="EventId" />
           </Key>
-          <Property Name="EventId" Type="Int32" Nullable="false" />
+          <Property Name="EventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Address" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Number" Type="Int32" Nullable="false" />
           <Property Name="Complement" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
@@ -407,17 +407,17 @@
           <Key>
             <PropertyRef Name="ModalityId" />
           </Key>
-          <Property Name="ModalityId" Type="Int32" Nullable="false" />
+          <Property Name="ModalityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Event" Relationship="ticketeiraModel.FK_Event_Modality" FromRole="Modality" ToRole="Event" />
+          <NavigationProperty Name="Events" Relationship="ticketeiraModel.FK_Event_Modality" FromRole="Modality" ToRole="Event" />
         </EntityType>
         <EntityType Name="PhoneType">
           <Key>
             <PropertyRef Name="PhoneTypeId" />
           </Key>
-          <Property Name="PhoneTypeId" Type="Int32" Nullable="false" />
+          <Property Name="PhoneTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="UserPhone" Relationship="ticketeiraModel.FK_UserPhone_PhoneType" FromRole="PhoneType" ToRole="UserPhone" />
+          <NavigationProperty Name="UserPhones" Relationship="ticketeiraModel.FK_UserPhone_PhoneType" FromRole="PhoneType" ToRole="UserPhone" />
         </EntityType>
         <EntityType Name="State">
           <Key>
@@ -427,9 +427,9 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UF" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
           <Property Name="Region" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="City" Relationship="ticketeiraModel.FK_City_State_UF" FromRole="State" ToRole="City" />
+          <NavigationProperty Name="Cities" Relationship="ticketeiraModel.FK_City_State_UF" FromRole="State" ToRole="City" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
+        <EntityType Name="sysdiagram">
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
@@ -443,18 +443,18 @@
           <Key>
             <PropertyRef Name="UserPhoneId" />
           </Key>
-          <Property Name="UserPhoneId" Type="Int32" Nullable="false" />
+          <Property Name="UserPhoneId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="PhoneNumber" Type="Int32" Nullable="false" />
           <Property Name="PhoneTypeId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PhoneType" Relationship="ticketeiraModel.FK_UserPhone_PhoneType" FromRole="UserPhone" ToRole="PhoneType" />
-          <NavigationProperty Name="Users" Relationship="ticketeiraModel.FK_UserPhone_Users" FromRole="UserPhone" ToRole="Users" />
+          <NavigationProperty Name="User" Relationship="ticketeiraModel.FK_UserPhone_Users" FromRole="UserPhone" ToRole="User" />
         </EntityType>
-        <EntityType Name="Users">
+        <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserTypeId" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="Login" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
@@ -467,17 +467,17 @@
           <Property Name="ZipCode" Type="Int32" Nullable="false" />
           <Property Name="LastLogin" Type="DateTime" Precision="3" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="City" Relationship="ticketeiraModel.FK_User_City" FromRole="Users" ToRole="City" />
-          <NavigationProperty Name="UserPhone" Relationship="ticketeiraModel.FK_UserPhone_Users" FromRole="Users" ToRole="UserPhone" />
-          <NavigationProperty Name="UserType" Relationship="ticketeiraModel.FK_User_UserType" FromRole="Users" ToRole="UserType" />
+          <NavigationProperty Name="City" Relationship="ticketeiraModel.FK_User_City" FromRole="User" ToRole="City" />
+          <NavigationProperty Name="UserPhones" Relationship="ticketeiraModel.FK_UserPhone_Users" FromRole="User" ToRole="UserPhone" />
+          <NavigationProperty Name="UserType" Relationship="ticketeiraModel.FK_User_UserType" FromRole="User" ToRole="UserType" />
         </EntityType>
         <EntityType Name="UserType">
           <Key>
             <PropertyRef Name="UserTypeId" />
           </Key>
-          <Property Name="UserTypeId" Type="Int32" Nullable="false" />
+          <Property Name="UserTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Users" Relationship="ticketeiraModel.FK_User_UserType" FromRole="UserType" ToRole="Users" />
+          <NavigationProperty Name="Users" Relationship="ticketeiraModel.FK_User_UserType" FromRole="UserType" ToRole="User" />
         </EntityType>
         <Association Name="FK_Event_Category">
           <End Type="ticketeiraModel.Category" Role="Category" Multiplicity="1" />
@@ -517,12 +517,12 @@
         </Association>
         <Association Name="FK_User_City">
           <End Type="ticketeiraModel.City" Role="City" Multiplicity="0..1" />
-          <End Type="ticketeiraModel.Users" Role="Users" Multiplicity="*" />
+          <End Type="ticketeiraModel.User" Role="User" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="City">
               <PropertyRef Name="CityId" />
             </Principal>
-            <Dependent Role="Users">
+            <Dependent Role="User">
               <PropertyRef Name="CityId" />
             </Dependent>
           </ReferentialConstraint>
@@ -552,10 +552,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_UserPhone_Users">
-          <End Type="ticketeiraModel.Users" Role="Users" Multiplicity="1" />
+          <End Type="ticketeiraModel.User" Role="User" Multiplicity="1" />
           <End Type="ticketeiraModel.UserPhone" Role="UserPhone" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Users">
+            <Principal Role="User">
               <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="UserPhone">
@@ -565,12 +565,12 @@
         </Association>
         <Association Name="FK_User_UserType">
           <End Type="ticketeiraModel.UserType" Role="UserType" Multiplicity="1" />
-          <End Type="ticketeiraModel.Users" Role="Users" Multiplicity="*" />
+          <End Type="ticketeiraModel.User" Role="User" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="UserType">
               <PropertyRef Name="UserTypeId" />
             </Principal>
-            <Dependent Role="Users">
+            <Dependent Role="User">
               <PropertyRef Name="UserTypeId" />
             </Dependent>
           </ReferentialConstraint>
@@ -605,7 +605,7 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ticketeiraModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ticketeiraModel.Store.sp_upgraddiagrams" />
-          <EntitySetMapping Name="Category">
+          <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="ticketeiraModel.Category">
               <MappingFragment StoreEntitySet="Category">
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -613,7 +613,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="City">
+          <EntitySetMapping Name="Cities">
             <EntityTypeMapping TypeName="ticketeiraModel.City">
               <MappingFragment StoreEntitySet="City">
                 <ScalarProperty Name="UF" ColumnName="UF" />
@@ -623,7 +623,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Event">
+          <EntitySetMapping Name="Events">
             <EntityTypeMapping TypeName="ticketeiraModel.Event">
               <MappingFragment StoreEntitySet="Event">
                 <ScalarProperty Name="Value" ColumnName="Value" />
@@ -640,7 +640,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Modality">
+          <EntitySetMapping Name="Modalities">
             <EntityTypeMapping TypeName="ticketeiraModel.Modality">
               <MappingFragment StoreEntitySet="Modality">
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -648,7 +648,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PhoneType">
+          <EntitySetMapping Name="PhoneTypes">
             <EntityTypeMapping TypeName="ticketeiraModel.PhoneType">
               <MappingFragment StoreEntitySet="PhoneType">
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -656,7 +656,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="State">
+          <EntitySetMapping Name="States">
             <EntityTypeMapping TypeName="ticketeiraModel.State">
               <MappingFragment StoreEntitySet="State">
                 <ScalarProperty Name="Region" ColumnName="Region" />
@@ -667,7 +667,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="ticketeiraModel.sysdiagrams">
+            <EntityTypeMapping TypeName="ticketeiraModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="definition" ColumnName="definition" />
                 <ScalarProperty Name="version" ColumnName="version" />
@@ -677,7 +677,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="UserPhone">
+          <EntitySetMapping Name="UserPhones">
             <EntityTypeMapping TypeName="ticketeiraModel.UserPhone">
               <MappingFragment StoreEntitySet="UserPhone">
                 <ScalarProperty Name="PhoneTypeId" ColumnName="PhoneTypeId" />
@@ -688,7 +688,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="ticketeiraModel.Users">
+            <EntityTypeMapping TypeName="ticketeiraModel.User">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
@@ -706,7 +706,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="UserType">
+          <EntitySetMapping Name="UserTypes">
             <EntityTypeMapping TypeName="ticketeiraModel.UserType">
               <MappingFragment StoreEntitySet="UserType">
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -728,7 +728,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
