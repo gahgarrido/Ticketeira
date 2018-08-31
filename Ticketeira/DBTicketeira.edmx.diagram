@@ -5,10 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a02fc62450224c6182a99b8d724f6453" Name="Diagram1" ZoomLevel="74">
-        <EntityTypeShape EntityType="ticketeiraModel.Category" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="ticketeiraModel.Category" Width="1.5" PointX="6" PointY="9.125" />
         <EntityTypeShape EntityType="ticketeiraModel.City" Width="1.5" PointX="3" PointY="4.5" />
         <EntityTypeShape EntityType="ticketeiraModel.Event" Width="1.5" PointX="8.25" PointY="3.875" />
-        <EntityTypeShape EntityType="ticketeiraModel.Modality" Width="1.5" PointX="6" PointY="9.125" />
+        <EntityTypeShape EntityType="ticketeiraModel.Modality" Width="1.5" PointX="6" PointY="0.75" />
         <EntityTypeShape EntityType="ticketeiraModel.PhoneType" Width="1.5" PointX="8.25" PointY="0.875" />
         <EntityTypeShape EntityType="ticketeiraModel.State" Width="1.5" PointX="0.75" PointY="4.75" />
         <EntityTypeShape EntityType="ticketeiraModel.sysdiagram" Width="1.5" PointX="0.75" PointY="8" />

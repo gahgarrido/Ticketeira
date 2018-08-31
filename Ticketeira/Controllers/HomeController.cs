@@ -31,14 +31,24 @@ namespace Ticketeira.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult GetEstados()
         {
-            ticketeiraEntities entities = new ticketeiraEntities();
+            try
+            {
+                ticketeiraEntities entities = new ticketeiraEntities();
 
-            var estados = entities.States;
+                var estados = entities.States;
 
 
-            return Json(estados);
+                return Json(estados);
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+            
         }
 
         public ActionResult GetCidades(string uf)
@@ -55,7 +65,7 @@ namespace Ticketeira.Controllers
         {
             ticketeiraEntities entities = new ticketeiraEntities();
             
-            var user = entities.Users.FirstOrDefault(_ => _.Email == email && _.Password == password && _.Status == true);
+            var user = entities.Users.FirstOrDefault(_ => (_.Email == email || _.Login == email) && _.Password == password && _.Status == true);
 
             if(user != null)
             {

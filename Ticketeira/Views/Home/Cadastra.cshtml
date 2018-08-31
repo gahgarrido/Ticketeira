@@ -169,12 +169,12 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group mb-0">
-                                                                        <div class="panel-wrapper collapse in">
+                                                                        @*<div class="panel-wrapper collapse in">
                                                                             <div class="panel-body">
                                                                                 <img src="~/jetsonFiles/dist/img/sweetalert/alert5.png" alt="alert" class="img-responsive model_img" id="sa-params">
                                                                                 <button type="button" class="btn btn-info" id="btnCadastrar">Cadastrar</button>
                                                                             </div>
-                                                                        </div>
+                                                                        </div>*@
                                                                         <div class="col-sm-offset-3 col-sm-9">
                                                                             <button type="button" class="btn btn-info" id="btnCadastrar">Cadastrar</button>
                                                                         </div>
@@ -293,22 +293,29 @@
             });
 
             $("#btnCadastrar").click(function () {
-                //var usuarioObj = ObjUsuario();
+                var usuarioObj = ObjUsuario();
 
-                //usuarioObj.setUser($("#user").val());
-                //usuarioObj.setPassword($("#userPassword").val());
-                //usuarioObj.setName($("#userName").val());
-                //usuarioObj.setEmail($("#userEmail").val());
-                //usuarioObj.setAddress($("#UserAddress").val());
-                //usuarioObj.setNumber($("#userNumber").val());
-                //usuarioObj.setAddress2($("#userAddress2").val());
-                //usuarioObj.setCep($("#userCep").val());
-                //usuarioObj.setEstadoSelect($("#userEstadoSelect").val());
-                //usuarioObj.setCidadeSelect($("#userCidadeSelect").val());
+                usuarioObj.setUser($("#user").val());
+                usuarioObj.setPassword($("#userPassword").val());
+                usuarioObj.setName($("#userName").val());
+                usuarioObj.setEmail($("#userEmail").val());
+                usuarioObj.setAddress($("#UserAddress").val());
+                usuarioObj.setNumber($("#userNumber").val());
+                usuarioObj.setAddress2($("#userAddress2").val());
+                usuarioObj.setCep($("#userCep").val());
+                usuarioObj.setEstadoSelect($("#userEstadoSelect").val());
+                usuarioObj.setCidadeSelect($("#userCidadeSelect").val());
 
-                //var userPasswordConfParam = $("#userPasswordConf").val();
+                var userPasswordConfParam = $("#userPasswordConf").val();
 
                 //validaLogin(usuarioObj, userPasswordConfParam);
+
+                //validaUsuario(usuarioObj);
+
+                validaEmail(usuarioObj);
+
+
+
                 //$("#testeAlert").modal("show");
                 alert();
             });
@@ -317,12 +324,55 @@
         });
 
         function validaLogin(objUser, passwordConfirmation) {
+            if (objUser.getPassword() != passwordConfirmation) {
+                alert("Password de Confirmação Inválido!");
+                return false;
+            }   
+            return true;
+        }
 
-            //var teste = (ObjUsuario)objUser;
+        function validaUsuario(objUser) {
+            if (objUser.getUser() == "" || objUser.getUser().length < 5) {
+                alert("O campo USUÁRIO deve ser preenchido com no minimo 5 letras");
+                return false;
+            }
+            return true;
+        }
 
-            //teste.get
+        function validaPassword(objUser) {
+            if (objUser.getPassword() == "" || objUser.getPassword().length < 5) {
+                alert("O campo SENHA deve ser preenchido com no minimo 5 letras");
+                return false;
+            }
+            return true;
+        }
 
+        function validaName(objUser) {
+            if (objUser.getName() == "" || objUser.getName().length < 5) {
+                alert("O campo NOME deve ser preenchido com no minimo 5 letras");
+                return false;
+            }
+            return true;
+        }
 
+        function validaEmail(objUser) {
+            var reg = "/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/";
+
+            const regex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+            let m;
+
+            if ((m = regex.exec(objUser.getEmail())) !== null) {
+                // The result can be accessed through the `m`-variable.
+                m.forEach((match, groupIndex) => {
+                    console.log(`Found match, group ${groupIndex}: ${match}`);
+                });
+            }
+
+            //if (objUser.getEmail() == "" || objUser.getEmail().length < 5) {
+            //    alert("O campo NOME deve ser preenchido com no minimo 5 letras");
+            //    return false;
+            //}
+            //return true;
         }
 
         function validaEstado(estado) {
@@ -340,8 +390,9 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data, status) {
+                    console.log(data);
                     for (var i = 0; i < data.length; i++) {
-                        $("#userEstadoSelect").append("<option id='" + data[i].Uf + "'>" + data[i].Nome + "</option>");
+                        $("#userEstadoSelect").append("<option id='" + data[i].UF + "'>" + data[i].Name + "</option>");
                     }
                 },
                 error: errorFunc
