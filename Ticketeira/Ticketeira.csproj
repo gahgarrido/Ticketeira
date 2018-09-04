@@ -4504,7 +4504,6 @@
       <DependentUpon>ticketeiraEntities.edmx</DependentUpon>
     </Content>
     <Content Include="Views\Cadastro\CadastraEvento.cshtml" />
-    <Content Include="Views\Cadastro\Teste.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
