@@ -38,8 +38,7 @@ namespace Ticketeira.Controllers
             {
                 ticketeiraEntities entities = new ticketeiraEntities();
 
-                var estados = entities.States;
-
+                var estados = entities.States.Select(_ => new {_.Name, _.UF, _.StateId});
 
                 return Json(estados);
             }
@@ -55,7 +54,7 @@ namespace Ticketeira.Controllers
         {
             ticketeiraEntities entities = new ticketeiraEntities();
 
-            var cidades = entities.Cities.Where(_ => _.UF == uf);
+            var cidades = entities.Cities.Where(_ => _.UF == uf).Select(_ => new { _.Name, _.CityId});
 
             return Json(cidades);
         }

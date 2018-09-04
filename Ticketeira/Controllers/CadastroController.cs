@@ -11,7 +11,13 @@ namespace Ticketeira.Controllers
         // GET: Cadastro
         public ActionResult Index()
         {
+            return View("CadastraEvento");
+        }
+
+        public ActionResult CadastraEvento()
+        {
             return View();
         }
+
     }
 }

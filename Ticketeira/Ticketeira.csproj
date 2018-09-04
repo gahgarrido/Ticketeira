@@ -158,90 +158,75 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Category.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
+      <DependentUpon>ticketeiraEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="City.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
+      <DependentUpon>ticketeiraEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\CadastroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="DBTicketeira.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBTicketeira.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBTicketeira.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBTicketeira.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBTicketeira.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Event.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
+      <DependentUpon>ticketeiraEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Modality.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
+      <DependentUpon>ticketeiraEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="PhoneType.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
+      <DependentUpon>ticketeiraEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
-    </Compile>
     <Compile Include="State.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
+      <DependentUpon>ticketeiraEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
+      <DependentUpon>ticketeiraEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ticketeiraEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ticketeiraEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ticketeiraEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ticketeiraEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ticketeiraEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ticketeiraEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
+      <DependentUpon>ticketeiraEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="UserPhone.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
+      <DependentUpon>ticketeiraEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="UserType.cs">
-      <DependentUpon>DBTicketeira.tt</DependentUpon>
+      <DependentUpon>ticketeiraEntities.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Antlr3.Runtime.dll" />
-    <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
-    <Content Include="bin\EntityFramework.SqlServer.xml" />
-    <Content Include="bin\EntityFramework.xml" />
     <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
-    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
     <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
     <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
     <Content Include="bin\Microsoft.AI.Web.dll" />
-    <Content Include="bin\Microsoft.AI.Web.xml" />
     <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
-    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
     <Content Include="bin\Microsoft.ApplicationInsights.dll" />
     <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.dll" />
-    <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.xml" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
     <Content Include="bin\Newtonsoft.Json.dll" />
-    <Content Include="bin\Newtonsoft.Json.xml" />
     <Content Include="bin\roslyn\csc.exe" />
     <Content Include="bin\roslyn\csi.exe" />
     <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
@@ -279,21 +264,13 @@
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="bin\System.Diagnostics.DiagnosticSource.dll" />
-    <Content Include="bin\System.Diagnostics.DiagnosticSource.xml" />
     <Content Include="bin\System.Web.Helpers.dll" />
-    <Content Include="bin\System.Web.Helpers.xml" />
     <Content Include="bin\System.Web.Mvc.dll" />
-    <Content Include="bin\System.Web.Mvc.xml" />
     <Content Include="bin\System.Web.Optimization.dll" />
-    <Content Include="bin\System.Web.Optimization.xml" />
     <Content Include="bin\System.Web.Razor.dll" />
-    <Content Include="bin\System.Web.Razor.xml" />
     <Content Include="bin\System.Web.WebPages.Deployment.dll" />
-    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
     <Content Include="bin\System.Web.WebPages.dll" />
     <Content Include="bin\System.Web.WebPages.Razor.dll" />
-    <Content Include="bin\System.Web.WebPages.Razor.xml" />
-    <Content Include="bin\System.Web.WebPages.xml" />
     <Content Include="bin\Ticketeira.dll" />
     <Content Include="bin\Ticketeira.pdb" />
     <Content Include="bin\WebGrease.dll" />
@@ -301,16 +278,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="DBTicketeira.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBTicketeira.edmx</DependentUpon>
-      <LastGenOutput>DBTicketeira.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DBTicketeira.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBTicketeira.edmx</DependentUpon>
-      <LastGenOutput>DBTicketeira.cs</LastGenOutput>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -1048,44 +1015,6 @@
     <Content Include="jetsonFiles\vendors\bower_components\filament-tablesaw\test\tablesaw_test.js" />
     <Content Include="jetsonFiles\vendors\bower_components\flot.tooltip\js\jquery.flot.tooltip.min.js" />
     <Content Include="jetsonFiles\vendors\bower_components\Flot\.gitignore" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\ajax\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\annotating\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-interacting\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-multiple\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\date.js" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\background.png" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\basic-options\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\basic-usage\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\canvas\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\categories\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\examples.css" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\image\hs-2004-27-a-large-web.jpg" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\image\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\interacting\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\navigate\arrow-down.gif" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\navigate\arrow-left.gif" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\navigate\arrow-right.gif" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\navigate\arrow-up.gif" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\navigate\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\percentiles\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\realtime\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\resize\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\selection\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\series-errorbars\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\series-pie\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\series-toggle\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\series-types\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\shared\jquery-ui\jquery-ui.min.css" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\shared\jquery-ui\jquery-ui.min.js" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\stacking\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\symbols\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\threshold\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\tracking\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\visitors\index.html" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\zooming\index.html" />
     <Content Include="jetsonFiles\vendors\bower_components\Flot\excanvas.js" />
     <Content Include="jetsonFiles\vendors\bower_components\Flot\excanvas.min.js" />
     <Content Include="jetsonFiles\vendors\bower_components\Flot\jquery.colorhelpers.js" />
@@ -3276,7 +3205,6 @@
     <Content Include="jetsonFiles\vendors\jquery.sparkline\.gitignore" />
     <Content Include="jetsonFiles\vendors\jquery.sparkline\Changelog.txt" />
     <Content Include="jetsonFiles\vendors\jquery.sparkline\dist\.gitignore" />
-    <Content Include="jetsonFiles\vendors\jquery.sparkline\dist\jquery.sparkline.min.js" />
     <Content Include="jetsonFiles\vendors\jquery.sparkline\minheader.txt" />
     <Content Include="jetsonFiles\vendors\jquery.sparkline\src\base.js" />
     <Content Include="jetsonFiles\vendors\jquery.sparkline\src\chart-bar.js" />
@@ -3315,13 +3243,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="DBTicketeira.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBTicketeira.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="DBTicketeira.edmx.diagram">
-      <DependentUpon>DBTicketeira.edmx</DependentUpon>
     </Content>
     <Content Include="jetsonFiles\dist\css\style.css.map" />
     <Content Include="jetsonFiles\dist\fonts\fontawesome\fontawesome-webfont.eot" />
@@ -3614,33 +3535,6 @@
     <Content Include="jetsonFiles\vendors\bower_components\Flot\API.md" />
     <Content Include="jetsonFiles\vendors\bower_components\Flot\component.json" />
     <Content Include="jetsonFiles\vendors\bower_components\Flot\CONTRIBUTING.md" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\ajax\data-eu-gdp-growth-1.json" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\ajax\data-eu-gdp-growth-2.json" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\ajax\data-eu-gdp-growth-3.json" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\ajax\data-eu-gdp-growth-4.json" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\ajax\data-eu-gdp-growth-5.json" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\ajax\data-eu-gdp-growth.json" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\ajax\data-japan-gdp-growth.json" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\ajax\data-usa-gdp-growth.json" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\africa" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\antarctica" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\asia" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\australasia" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\backward" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\etcetera" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\europe" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\factory" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\iso3166.tab" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\leapseconds" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\northamerica" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\pacificnew" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\solar87" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\solar88" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\solar89" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\southamerica" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\systemv" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\yearistype.sh" />
-    <Content Include="jetsonFiles\vendors\bower_components\Flot\examples\axes-time-zones\tz\zone.tab" />
     <Content Include="jetsonFiles\vendors\bower_components\Flot\FAQ.md" />
     <Content Include="jetsonFiles\vendors\bower_components\Flot\flot.jquery.json" />
     <Content Include="jetsonFiles\vendors\bower_components\Flot\Makefile" />
@@ -3955,7 +3849,6 @@
     <Content Include="jetsonFiles\vendors\bower_components\pdfmake\LICENSE" />
     <Content Include="jetsonFiles\vendors\bower_components\peity\.bower.json" />
     <Content Include="jetsonFiles\vendors\bower_components\peity\.travis.yml" />
-    <Content Include="jetsonFiles\vendors\bower_components\peity\bin\update_docs" />
     <Content Include="jetsonFiles\vendors\bower_components\peity\bower.json" />
     <Content Include="jetsonFiles\vendors\bower_components\peity\CHANGELOG.md" />
     <Content Include="jetsonFiles\vendors\bower_components\peity\Gemfile" />
@@ -3964,10 +3857,7 @@
     <Content Include="jetsonFiles\vendors\bower_components\peity\MIT-LICENCE" />
     <Content Include="jetsonFiles\vendors\bower_components\peity\package.json" />
     <Content Include="jetsonFiles\vendors\bower_components\peity\README.markdown" />
-    <Content Include="jetsonFiles\vendors\bower_components\peity\test\bin\screenshot" />
     <Content Include="jetsonFiles\vendors\bower_components\peity\test\charts.json" />
-    <Content Include="jetsonFiles\vendors\bower_components\peity\test\comparisons\.gitkeep" />
-    <Content Include="jetsonFiles\vendors\bower_components\peity\test\images\.gitkeep" />
     <Content Include="jetsonFiles\vendors\bower_components\peity\test\views\chart.ejs" />
     <Content Include="jetsonFiles\vendors\bower_components\peity\test\views\index.ejs" />
     <Content Include="jetsonFiles\vendors\bower_components\peity\test\views\show.ejs" />
@@ -4003,7 +3893,6 @@
     <Content Include="jetsonFiles\vendors\bower_components\select2\docs\css\bootstrap.scss" />
     <Content Include="jetsonFiles\vendors\bower_components\select2\docs\css\font-awesome.scss" />
     <Content Include="jetsonFiles\vendors\bower_components\select2\docs\css\s2-docs.scss" />
-    <Content Include="jetsonFiles\vendors\bower_components\select2\docs\dist\.gitkeep" />
     <Content Include="jetsonFiles\vendors\bower_components\select2\docs\images\manifest.json" />
     <Content Include="jetsonFiles\vendors\bower_components\select2\docs\README.md" />
     <Content Include="jetsonFiles\vendors\bower_components\select2\docs\vendor\fonts\fontawesome-webfont.eot" />
@@ -4564,6 +4453,7 @@
     <Content Include="obj\Debug\Ticketeira.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Debug\Ticketeira.csprojAssemblyReference.cache" />
     <Content Include="obj\Debug\Tsc.out" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -4576,7 +4466,19 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="ticketeiraEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ticketeiraEntities.edmx</DependentUpon>
+      <LastGenOutput>ticketeiraEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ticketeiraEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ticketeiraEntities.edmx</DependentUpon>
+      <LastGenOutput>ticketeiraEntities.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -4593,12 +4495,24 @@
     <Content Include="Views\Shared\_Layout_old.cshtml" />
     <Content Include="Views\Home\Index_old.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Cadastro\Cadastra.cshtml" />
     <Content Include="Views\Home\Cadastra.cshtml" />
+    <EntityDeploy Include="ticketeiraEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ticketeiraEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ticketeiraEntities.edmx.diagram">
+      <DependentUpon>ticketeiraEntities.edmx</DependentUpon>
+    </Content>
+    <Content Include="Views\Cadastro\CadastraEvento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="jetsonFiles\vendors\bower_components\pdfmake\libs\FileSaver.js\" />
+    <Folder Include="jetsonFiles\vendors\bower_components\peity\bin\" />
+    <Folder Include="jetsonFiles\vendors\bower_components\peity\test\bin\" />
+    <Folder Include="jetsonFiles\vendors\bower_components\peity\test\comparisons\" />
+    <Folder Include="jetsonFiles\vendors\bower_components\peity\test\images\" />
+    <Folder Include="jetsonFiles\vendors\bower_components\select2\docs\dist\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

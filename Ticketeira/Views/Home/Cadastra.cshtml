@@ -413,7 +413,7 @@
                 success: function (data, status) {
                     console.log(data);
                     for (var i = 0; i < data.length; i++) {
-                        $("#userCidadeSelect").append("<option id='" + data[i].Nome + "'>" + data[i].Nome + "</option>");
+                        $("#userCidadeSelect").append("<option id='" + data[i].CityId + "'>" + data[i].Name + "</option>");
                     }
                     $("#userCidadeSelect option[id='" + cidade + "']").prop("selected", true);
                 },
